@@ -1,0 +1,107 @@
+
+
+body {
+    background-color: #1c2036;
+    color: #fff;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+div.main {
+    display: flex;
+}
+
+div.main .left {
+    flex: 1;
+    margin-left: 20px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.main .right {
+    flex: 3;
+    margin-right: 20px;
+}
+
+div.main .section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Containers */
+div.container {
+    box-sizing: border-box;
+    border: 2px solid white;
+    background-color: #2d4386;
+    box-shadow: 4px 2px 0px 0px #fff;
+}
+
+div.container#profile  {
+    flex: 1;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+div.container#profile h2#name {
+    border: 2px solid white;
+    padding: 5px;
+    margin: 5px;
+}
+
+div.container#bottom {
+    flex:3;
+    padding-bottom: 800px;
+}
+
+div.container#fund-me {
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+  
+
+
+/* Links */
+ul.links {
+    list-style: none;  /* Remove default bullets */
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8;  /* Light background color */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 400px;  /* Optional: limit the width */
+  }
+  
+  ul.links li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s;
+  }
+  
+  ul.links li:last-child {
+    border-bottom: none;
+  }
+  
+  ul.links li:hover {
+    background: #eaeaea;
+  }
+  
+  ul.links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  ul.links li a:hover {
+    color: #2d4386;
+  }
+
