@@ -1,7 +1,7 @@
 //import { ethers } from "ethers"
 //import { abi, contractAddress } from "./constants"
 
-const connectButton = document.getElementById("wallet-connect")
+const connectButton = document.getElementById("connect")
 // const withdrawButton = document.getElementById("withdrawButton")
 // const fundButton = document.getElementById("fundButton")
 // const balanceButton = document.getElementById("balanceButton")
@@ -81,3 +81,26 @@ async function connect() {
 //     balanceButton.innerHTML = "Please install MetaMask"
 //   }
 // }
+
+function adjustHeaderWidths() {
+  const header = document.querySelector('header .header');
+  const headerLeft = document.querySelector('.header-left');
+  const headerRight = document.querySelector('.header-right');
+
+  if (header && headerLeft && headerRight) {
+    const headerWidth = header.offsetWidth;
+    const headerRightWidth = headerRight.offsetWidth;
+
+    let availableWidth = headerWidth - headerRightWidth;
+
+    if (availableWidth < 0) {
+      availableWidth = 0;
+    }
+
+    headerLeft.style.maxWidth = availableWidth + 'px';
+  }
+}
+
+// Call the function on page load and resize
+window.addEventListener('load', adjustHeaderWidths);
+window.addEventListener('resize', adjustHeaderWidths);

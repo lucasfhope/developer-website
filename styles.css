@@ -1,62 +1,79 @@
 
 
-body {
-    background-color: #1c2036;
-    color: #fff;
-    font-family: monospace;
-    font-size: 16px;
+/* Header */
+
+header {
+    background-color: #87f8d8;
+    color: rgb(17, 16, 16);
+    position: fixed;
+    height: 60px;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border: 1px solid #fff;
 }
 
-div.main {
-    display: flex;
+header .header {
+    position: relative;
 }
 
-div.main .left {
-    flex: 1;
-    margin-left: 20px;
-    margin-right: 30px;
-    display: flex;
-    flex-direction: column;
+header .header > div {
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
 }
 
-div.main .right {
-    flex: 3;
-    margin-right: 20px;
+.header-left {
+    top: -2px;
 }
 
-div.main .section {
-    margin-top: 10px;
-    margin-bottom: 10px;
+.header-right {
+    right: 1%;
+    margin-top: 1%;
 }
 
-
-/* Containers */
-div.container {
-    box-sizing: border-box;
-    border: 2px solid white;
-    background-color: #2d4386;
-    box-shadow: 4px 2px 0px 0px #fff;
+#name {
+    left: 15px;
+    top: -5px;
+    font-family: fantasy;
 }
 
-div.container#profile  {
-    flex: 1;
-    padding: 10px;
-    margin-bottom: 10px;
+.links {
+    display: inline-block;
+}
+
+.links > div {
+    display: inline-block;
+    margin-right:0;
+    margin-left:0;
+    height: 40px;
     text-align: center;
+    vertical-align: middle;
 }
 
-div.container#profile h2#name {
-    border: 2px solid white;
-    padding: 5px;
-    margin: 5px;
+.links img {
+    height: 100%;
 }
 
-div.container#bottom {
-    flex:3;
-    padding-bottom: 800px;
+.links #linkedin {
+    width: 70%;
 }
 
-div.container#fund-me {
+.links #kaggle {
+    width: 80%;
+    height: 90%;
+    margin-top: 5%;
+}
+
+.ethereum-wallet {
+    display: inline-block;
+    position: relative;
+    height: 40px;
+    vertical-align: middle;
+}
+
+#connect {
     height: 100%;
 }
 
@@ -64,44 +81,14 @@ div.container#fund-me {
 
 
 
+body {
+    background-color: #1c2036;
+    color: #fff;
+    font-family: monospace;
+    font-size: 16px;
+}
 
 
 
-  
 
-
-/* Links */
-ul.links {
-    list-style: none;  /* Remove default bullets */
-    margin: 0;
-    padding: 0;
-    background: #f8f8f8;  /* Light background color */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    max-width: 400px;  /* Optional: limit the width */
-  }
-  
-  ul.links li {
-    padding: 10px 15px;
-    border-bottom: 1px solid #ddd;
-    transition: background 0.3s;
-  }
-  
-  ul.links li:last-child {
-    border-bottom: none;
-  }
-  
-  ul.links li:hover {
-    background: #eaeaea;
-  }
-  
-  ul.links li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  ul.links li a:hover {
-    color: #2d4386;
-  }
 
