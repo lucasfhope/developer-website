@@ -1,13 +1,6 @@
 
 
-body {
-    background-color: #1c2036;
-    color: #fff;
-    font-family: monospace;
-    font-size: 16px;
-    position: relative;
-}
-
+/* Header */
 
 header {
     background-color: #87f8d8;
@@ -18,16 +11,26 @@ header {
     top: 0;
     left: 0;
     z-index: 1;
+    border: 1px solid #fff;
 }
 
-.header {
+header .header {
+    position: relative;
+}
+
+header .header > div {
+    display: inline-block;
     position: absolute;
+    white-space: nowrap;
 }
 
-#wallet-connect {
-    right: 10px;
-    margin: 10px;
-    padding: 10px;
+.header-left {
+    top: -2px;
+}
+
+.header-right {
+    right: 1%;
+    margin-top: 1%;
 }
 
 #name {
@@ -36,21 +39,56 @@ header {
     font-family: fantasy;
 }
 
-#github {
-    height: 45px;
-    top: 8px;
-    left: 310px;
+.links {
+    display: inline-block;
 }
 
-#linkedin {
-    height: 30px;
-    top: 15px;
-    left: 180px;
+.links > div {
+    display: inline-block;
+    margin-right:0;
+    margin-left:0;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
 }
 
-#kaggle {
-    height: 30px;
-    top: 18px;
-    left: 435px;
+.links img {
+    height: 100%;
 }
+
+.links #linkedin {
+    width: 70%;
+}
+
+.links #kaggle {
+    width: 80%;
+    height: 90%;
+    margin-top: 5%;
+}
+
+.ethereum-wallet {
+    display: inline-block;
+    position: relative;
+    height: 40px;
+    vertical-align: middle;
+}
+
+#connect {
+    height: 100%;
+}
+
+
+
+
+
+body {
+    background-color: #1c2036;
+    color: #fff;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+
+
+
 
