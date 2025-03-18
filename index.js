@@ -90,37 +90,21 @@ async function connect() {
 //   }
 // }
 
-function adjustHeaderLinksWhenWindowChangesSizes() {
+const adjustHeaderLinkImagesWhenWindowChangesSizes = () => {
   const github = document.querySelector('.links div #github');
   const linkedin = document.querySelector('.links div #linkedin');
   const kaggle = document.querySelector('.links div #kaggle');
-  const linkDivs = document.querySelectorAll('.links div');
-  const rightHeader = document.querySelector('.header .header-right');
   
   if(window.innerWidth <= 700) {
     github.src = "./images/github-logo-small.png";
     linkedin.src = "./images/linkedin-logo-small.png";
     kaggle.src = "./images/kaggle-logo-small.webp";
-
-    linkedin.style.width = "100%";
-    kaggle.style.width = "100%";
-    kaggle.style.height = "100%";
-    linkDivs[0].style.padding = "10px";
-    linkDivs[2].style.marginBottom = "5px";
-    linkDivs[2].style.marginLeft = "5px";
-    rightHeader.style.top = "-8px"; 
   } else {
     github.src = "./images/github-logo.png";
     linkedin.src = "./images/linkedin-logo.svg";
     kaggle.src = "./images/kaggle-logo.png";
-
-    linkedin.removeAttribute('style');
-    kaggle.removeAttribute('style');
-    linkDivs[0].removeAttribute('style');
-    linkDivs[2].removeAttribute('style');
-    rightHeader.removeAttribute('style');
   }
 }
 
-window.addEventListener('load', adjustHeaderLinksWhenWindowChangesSizes);
-window.addEventListener('resize', adjustHeaderLinksWhenWindowChangesSizes);
+window.addEventListener('load', adjustHeaderLinkImagesWhenWindowChangesSizes);
+window.addEventListener('resize', adjustHeaderLinkImagesWhenWindowChangesSizes);
