@@ -71,6 +71,7 @@ header .header > div {
     position: relative;
     height: 40px;
     vertical-align: middle;
+    margin-right: 1%;
 }
 
 #connect {

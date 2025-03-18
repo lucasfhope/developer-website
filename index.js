@@ -1,6 +1,14 @@
 //import { ethers } from "ethers"
 //import { abi, contractAddress } from "./constants"
 
+//import { link } from "fs"
+
+//import { link } from "fs"
+
+//import { link } from "fs"
+
+//import { link } from "fs"
+
 const connectButton = document.getElementById("connect")
 // const withdrawButton = document.getElementById("withdrawButton")
 // const fundButton = document.getElementById("fundButton")
@@ -82,25 +90,37 @@ async function connect() {
 //   }
 // }
 
-function adjustHeaderWidths() {
-  const header = document.querySelector('header .header');
-  const headerLeft = document.querySelector('.header-left');
-  const headerRight = document.querySelector('.header-right');
+function adjustHeaderLinksWhenWindowChangesSizes() {
+  const github = document.querySelector('.links div #github');
+  const linkedin = document.querySelector('.links div #linkedin');
+  const kaggle = document.querySelector('.links div #kaggle');
+  const linkDivs = document.querySelectorAll('.links div');
+  const rightHeader = document.querySelector('.header .header-right');
+  
+  if(window.innerWidth <= 700) {
+    github.src = "./images/github-logo-small.png";
+    linkedin.src = "./images/linkedin-logo-small.png";
+    kaggle.src = "./images/kaggle-logo-small.webp";
 
-  if (header && headerLeft && headerRight) {
-    const headerWidth = header.offsetWidth;
-    const headerRightWidth = headerRight.offsetWidth;
+    linkedin.style.width = "100%";
+    kaggle.style.width = "100%";
+    kaggle.style.height = "100%";
+    linkDivs[0].style.padding = "10px";
+    linkDivs[2].style.marginBottom = "5px";
+    linkDivs[2].style.marginLeft = "5px";
+    rightHeader.style.top = "-8px"; 
+  } else {
+    github.src = "./images/github-logo.png";
+    linkedin.src = "./images/linkedin-logo.svg";
+    kaggle.src = "./images/kaggle-logo.png";
 
-    let availableWidth = headerWidth - headerRightWidth;
-
-    if (availableWidth < 0) {
-      availableWidth = 0;
-    }
-
-    headerLeft.style.maxWidth = availableWidth + 'px';
+    linkedin.removeAttribute('style');
+    kaggle.removeAttribute('style');
+    linkDivs[0].removeAttribute('style');
+    linkDivs[2].removeAttribute('style');
+    rightHeader.removeAttribute('style');
   }
 }
 
-// Call the function on page load and resize
-window.addEventListener('load', adjustHeaderWidths);
-window.addEventListener('resize', adjustHeaderWidths);
+window.addEventListener('load', adjustHeaderLinksWhenWindowChangesSizes);
+window.addEventListener('resize', adjustHeaderLinksWhenWindowChangesSizes);
